@@ -17,23 +17,23 @@ export default function About() {
           >
             <span className="text-xs font-medium mb-4 block" style={{ color: "#8e6ce4", letterSpacing: "0.08em", textTransform: "uppercase" }}>The Story</span>
             <h2 className="display-text text-4xl md:text-5xl font-bold mb-6">
-              Built because I<br />kept forgetting
+              Built because I<br />kept losing focus
             </h2>
             <div className="space-y-4 text-sm leading-relaxed" style={{ color: "#8b8e9c" }}>
               <p>
-                I&apos;d write an API auth doc at 2am, then spend 40 minutes searching for it
-                two months later. I&apos;d have three versions of the same project notes scattered
-                across folders. I&apos;d ask myself &ldquo;what was I working on last week?&rdquo; and get nothing.
+                I&apos;d start a task, get distracted by a notification, and forget what I was doing.
+                My to-do lists were scattered across sticky notes, apps, and half-remembered thoughts.
+                I needed something that would not just list tasks, but actually help me do them.
               </p>
               <p>
-                Pinchu started as a weekend hack — a Python script that reads my files and answers
-                questions. Then Cognee&apos;s local graph database clicked: what if the memory wasn&apos;t
-                just a vector search, but a real knowledge graph that understands connections?
+                Pinchu started as a simple task tracker — then it grew. Activity monitoring so it
+                knows when I&apos;m actually working. Voice interaction so I can talk to it hands-free.
+                An animated character that sits on my desktop and nudges me back on track.
               </p>
               <p>
-                Now it&apos;s a desktop companion with a cute brain character that floats on my screen,
-                detects what I&apos;m doing, and proactively surfaces context. Everything stays on my machine.
-                No cloud. No subscriptions. Just memory that works.
+                Now it&apos;s a full productivity companion backed by Cognee cloud memory. It learns my
+                patterns, knows my schedule, and proactively helps me stay focused. Everything stored
+                locally with optional cloud sync. No subscriptions. Just focus that works.
               </p>
             </div>
           </motion.div>
@@ -49,12 +49,12 @@ export default function About() {
               {
                 icon: Heart,
                 title: "Privacy isn't a feature",
-                description: "It's the architecture. Kuzu, LanceDB, FastEmbed — all local. Your memory graph never leaves your machine.",
+                description: "It's the architecture. Local JSON storage with optional Cognee cloud. Your task data stays yours.",
               },
               {
                 icon: Sparkles,
-                title: "Cognee-native",
-                description: "Uses the full lifecycle: remember, recall, improve, forget. Custom DataPoint models. Session bridging. Not a wrapper — a user.",
+                title: "Cognee-powered memory",
+                description: "Cloud cognitive memory that learns your patterns and context. Not just storage — understanding.",
               },
             ].map((value, i) => (
               <motion.div

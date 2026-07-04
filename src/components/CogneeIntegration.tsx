@@ -1,19 +1,19 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Database, GitBranch, Search, RefreshCw, Trash2, Layers } from "lucide-react";
+import { Cloud, Brain, Sparkles, Shield } from "lucide-react";
 
 const operations = [
-  { icon: Database, name: "remember()", description: "Ingest files into your knowledge graph. Custom entity extraction.", action: "Scan → Add → Cognify", color: "#ab8ff1" },
-  { icon: Search, name: "recall()", description: "Hybrid graph+vector retrieval. Natural language Q&A with context.", action: "Query → Retrieve → Answer", color: "#8960f0" },
-  { icon: RefreshCw, name: "improve()", description: "Enrich graph with triplet embeddings. Bridge session data to permanent memory.", action: "Feedback → Enrich → Sync", color: "#8e6ce4" },
-  { icon: Trash2, name: "forget()", description: "Delete data when no longer needed. Full privacy control.", action: "Select → Delete → Clean", color: "#ab8ff1" },
+  { icon: Brain, name: "cognify()", description: "Process tasks and activities into cognitive memory. Pinchu learns your patterns, preferences, and productivity rhythms.", action: "Tasks → Learn → Adapt", color: "#ab8ff1" },
+  { icon: Sparkles, name: "recall()", description: "Retrieve context-aware insights from your memory. 'What was I doing yesterday?' 'When am I most productive?'", action: "Query → Context → Answer", color: "#8960f0" },
+  { icon: Cloud, name: "cloud sync", description: "Optional cloud storage via Cognee. Your memory persists across sessions and devices while staying encrypted.", action: "Encrypt → Sync → Access", color: "#8e6ce4" },
+  { icon: Shield, name: "local fallback", description: "When offline, Pinchu falls back to local JSON storage. Full functionality without internet. Your data stays on your machine.", action: "Detect → Fallback → Store", color: "#ab8ff1" },
 ];
 
 const techStack = [
-  { name: "Kuzu", desc: "Graph DB", icon: GitBranch },
-  { name: "LanceDB", desc: "Vector DB", icon: Layers },
-  { name: "FastEmbed", desc: "Embeddings", icon: Database },
+  { name: "Cognee Cloud", desc: "Cognitive Memory", icon: Cloud },
+  { name: "Local JSON", desc: "Offline Storage", icon: Shield },
+  { name: "Edge TTS", desc: "Voice Output", icon: Brain },
 ];
 
 export default function CogneeIntegration() {
@@ -29,10 +29,10 @@ export default function CogneeIntegration() {
         >
           <span className="text-xs font-medium mb-4 block" style={{ color: "#8e6ce4", letterSpacing: "0.08em", textTransform: "uppercase" }}>Powered by Cognee</span>
           <h2 className="display-text text-4xl md:text-5xl font-bold mb-5">
-            Full memory<br />lifecycle
+            Cognitive memory<br />that grows with you
           </h2>
           <p className="text-sm max-w-lg leading-relaxed" style={{ color: "#8b8e9c" }}>
-            Pinchu uses every core Cognee API — remember, recall, improve, forget — with custom DataPoint models for personal memory.
+            Pinchu uses Cognee cloud to build a memory that understands your work patterns, learns your preferences, and helps you stay focused.
           </p>
         </motion.div>
 
@@ -71,7 +71,7 @@ export default function CogneeIntegration() {
           style={{ border: "1px solid #31313a", borderRadius: "3px", background: "#0d0d12" }}
           className="p-8"
         >
-          <h3 className="text-sm font-semibold text-center mb-6" style={{ color: "#dad7de" }}>Storage Stack — All Local</h3>
+          <h3 className="text-sm font-semibold text-center mb-6" style={{ color: "#dad7de" }}>Storage Stack — Cloud + Local</h3>
           <div className="grid grid-cols-3 gap-6">
             {techStack.map((tech) => (
               <div key={tech.name} className="text-center">

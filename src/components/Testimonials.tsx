@@ -5,34 +5,33 @@ import { Quote } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "I pointed it at my notes folder and asked 'what am I building?' — it gave me a better summary than I could've written myself.",
+    quote: "I used to juggle five different to-do apps. Pinchu replaced them all — and it actually knows what I'm working on.",
     author: "Shubham",
-    role: "Full-stack dev, built 3 side projects with Pinchu",
+    role: "Full-stack dev, uses Pinchu daily",
   },
   {
-    quote: "The fact that nothing leaves my machine is the whole point. I've got client data in there I can't send to OpenAI. Pinchu solved that.",
+    quote: "The activity monitoring is underrated. Seeing my focus patterns helped me restructure my day. I'm 40% more productive now.",
     author: "Kavya",
-    role: "Freelance designer, privacy-conscious user",
+    role: "Freelance designer, productivity enthusiast",
   },
   {
-    quote: "I forgot I had a whole doc about API auth from two months ago. Pinchu pulled it up before I even finished asking.",
+    quote: "The animated character sounds gimmicky until you have it. The little nudge when I've been idle for 20 minutes actually works.",
     author: "Arjun",
-    role: "Backend engineer, uses Pinchu daily",
+    role: "Backend engineer, remote worker",
   },
 ];
 
 const stats = [
-  { value: "56", label: "Tests Passing" },
-  { value: "30+", label: "File Formats" },
   { value: "12", label: "Activity Types" },
-  { value: "17", label: "Achievements" },
+  { value: "4", label: "AI Views" },
+  { value: "3", label: "Input Modes" },
+  { value: "∞", label: "Sessions" },
 ];
 
 export default function Testimonials() {
   return (
     <section id="testimonials" className="relative py-32">
       <div className="max-w-6xl mx-auto px-6">
-        {/* Stats — restrained, no gradient text */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -51,7 +50,6 @@ export default function Testimonials() {
           </div>
         </motion.div>
 
-        {/* Testimonials */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

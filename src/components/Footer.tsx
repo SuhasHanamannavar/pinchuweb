@@ -5,23 +5,20 @@ import PinchuCharacter from "./PinchuCharacter";
 export default function Footer() {
   return (
     <footer className="relative py-16" style={{ borderTop: "1px solid #31313a" }}>
-      {/* Aurora accent at top */}
       <div className="absolute top-0 left-0 right-0 h-px" style={{ background: "linear-gradient(90deg, transparent, rgba(142, 108, 228, 0.2), transparent)" }} />
 
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-start justify-between gap-12 mb-12">
-          {/* Brand */}
           <div className="max-w-xs">
             <div className="flex items-center gap-2.5 mb-4">
               <PinchuCharacter size={18} animated={false} />
               <span className="text-sm font-medium" style={{ color: "#dad7de" }}>pinchu</span>
             </div>
             <p className="text-xs leading-relaxed" style={{ color: "#62626f" }}>
-              An AI memory companion that reads your files, builds a knowledge graph, and helps you recall anything.
+              An AI productivity buddy that manages your tasks, monitors your activity, and keeps you focused.
             </p>
           </div>
 
-          {/* Links — minimal, 2 columns */}
           <div className="grid grid-cols-2 gap-12">
             <div>
               <div className="text-[10px] font-medium mb-3" style={{ color: "#62626f", letterSpacing: "0.08em", textTransform: "uppercase" }}>Product</div>
@@ -51,7 +48,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom — minimal */}
         <div className="pt-6 flex flex-col md:flex-row items-center justify-between gap-4" style={{ borderTop: "1px solid #17171c" }}>
           <div className="text-[10px]" style={{ color: "#62626f" }}>
             &copy; 2026 Pinchu. Open source under MIT.

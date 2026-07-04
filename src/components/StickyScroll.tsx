@@ -1,27 +1,27 @@
 "use client";
 
 import { useState, useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { FolderOpen, Brain, MessageSquare, ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
+import { ListTodo, Brain, MessageSquare, ArrowRight } from "lucide-react";
 
 const workflowSteps = [
   {
-    icon: FolderOpen,
-    title: "Scan",
-    subtitle: "Discover your files",
-    description: "Point Pinchu at your projects, notes, documents. It reads 30+ file formats and extracts knowledge automatically with incremental scanning.",
-    details: ["Hash-based cache", "30+ formats", "Auto-detection", "File watcher"],
+    icon: ListTodo,
+    title: "Capture",
+    subtitle: "Add your tasks",
+    description: "Type or speak your tasks in natural language. Pinchu classifies them, assigns priorities, and organizes your day automatically.",
+    details: ["Natural language input", "Auto-classification", "Priority detection", "Voice input"],
     mockUI: (
       <div className="space-y-2">
         <div className="flex items-center gap-2 text-xs" style={{ color: "#8b8e9c" }}>
           <div className="w-1.5 h-1.5 rounded-full" style={{ background: "#22c55e" }} />
-          Scanning: ~/Projects/
+          Task Input
         </div>
-        {["notes/ideas.md", "project/README.md", "docs/architecture.pdf"].map((f) => (
-          <div key={f} className="flex items-center gap-2 px-3 py-2" style={{ background: "#08080a", border: "1px solid #17171c", borderRadius: "3px" }}>
-            <FolderOpen className="w-3 h-3" style={{ color: "#8e6ce4" }} />
-            <span className="text-xs font-mono" style={{ color: "#aeaac0" }}>{f}</span>
-            <span className="ml-auto text-[10px]" style={{ color: "#22c55e" }}>done</span>
+        {["Finish project report", "30 min exercise", "Review pull requests"].map((task, i) => (
+          <div key={task} className="flex items-center gap-2 px-3 py-2" style={{ background: "#08080a", border: "1px solid #17171c", borderRadius: "3px" }}>
+            <div className="w-2 h-2 rounded-full" style={{ background: i === 2 ? "#eab308" : "#22c55e" }} />
+            <span className="text-xs font-mono" style={{ color: "#aeaac0" }}>{task}</span>
+            <span className="ml-auto text-[10px]" style={{ color: "#62626f" }}>{["AI", "Health", "Work"][i]}</span>
           </div>
         ))}
       </div>
@@ -29,45 +29,50 @@ const workflowSteps = [
   },
   {
     icon: Brain,
-    title: "Understand",
-    subtitle: "Build knowledge graph",
-    description: "Cognee extracts entities, relationships, and connections into a hybrid graph-vector knowledge store.",
-    details: ["Entity extraction", "Relationship detection", "Graph storage", "Vector embeddings"],
+    title: "Track",
+    subtitle: "Monitor activity",
+    description: "Pinchu watches your activity in real-time — coding, browsing, working, or gaming. It knows when you're focused and when you need a break.",
+    details: ["12 activity types", "Window tracking", "Focus detection", "Break nudges"],
     mockUI: (
       <div className="space-y-2">
-        <div className="text-xs mb-2" style={{ color: "#8b8e9c" }}>Knowledge Graph</div>
+        <div className="text-xs mb-2" style={{ color: "#8b8e9c" }}>Activity Monitor</div>
         <div className="relative h-32" style={{ background: "#08080a", border: "1px solid #17171c", borderRadius: "3px", overflow: "hidden" }}>
-          <svg className="absolute inset-0 w-full h-full" viewBox="0 0 200 120">
-            <circle cx="100" cy="60" r="18" fill="rgba(142,108,228,0.2)" stroke="rgba(142,108,228,0.4)" strokeWidth="0.5" />
-            <circle cx="50" cy="30" r="10" fill="rgba(137,96,240,0.2)" stroke="rgba(137,96,240,0.4)" strokeWidth="0.5" />
-            <circle cx="150" cy="30" r="10" fill="rgba(171,143,241,0.2)" stroke="rgba(171,143,241,0.4)" strokeWidth="0.5" />
-            <circle cx="40" cy="90" r="8" fill="rgba(142,108,228,0.15)" stroke="rgba(142,108,228,0.3)" strokeWidth="0.5" />
-            <circle cx="160" cy="90" r="8" fill="rgba(137,96,240,0.15)" stroke="rgba(137,96,240,0.3)" strokeWidth="0.5" />
-            <line x1="100" y1="60" x2="50" y2="30" stroke="rgba(142,108,228,0.15)" strokeWidth="0.5" />
-            <line x1="100" y1="60" x2="150" y2="30" stroke="rgba(142,108,228,0.15)" strokeWidth="0.5" />
-            <line x1="100" y1="60" x2="40" y2="90" stroke="rgba(142,108,228,0.15)" strokeWidth="0.5" />
-            <line x1="100" y1="60" x2="160" y2="90" stroke="rgba(142,108,228,0.15)" strokeWidth="0.5" />
-          </svg>
+          <div className="absolute inset-0 p-3 space-y-2">
+            {[
+              { label: "Coding", pct: 45, color: "#22c55e" },
+              { label: "Browsing", pct: 25, color: "#8e6ce4" },
+              { label: "Meeting", pct: 20, color: "#eab308" },
+              { label: "Break", pct: 10, color: "#ef4444" },
+            ].map((a) => (
+              <div key={a.label} className="flex items-center gap-2">
+                <span className="text-[9px] w-14" style={{ color: "#62626f" }}>{a.label}</span>
+                <div className="flex-1 h-1.5 rounded-full" style={{ background: "#17171c" }}>
+                  <div className="h-full rounded-full" style={{ width: `${a.pct}%`, background: a.color }} />
+                </div>
+                <span className="text-[9px]" style={{ color: "#62626f" }}>{a.pct}%</span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     ),
   },
   {
     icon: MessageSquare,
-    title: "Recall",
-    subtitle: "Chat with your memory",
-    description: "Ask anything in natural language. Pinchu uses hybrid graph+vector retrieval for context-rich answers across infinite sessions.",
-    details: ["Natural language", "Graph context", "Session bridging", "Voice input"],
+    title: "Assist",
+    subtitle: "Get things done",
+    description: "Chat with Pinchu about your tasks, get daily summaries, and receive proactive nudges to keep you on track throughout the day.",
+    details: ["AI chat", "Daily summaries", "Progress reports", "Voice output"],
     mockUI: (
       <div className="space-y-2">
         <div className="flex gap-2">
           <div className="px-3 py-1.5 text-xs" style={{ background: "rgba(142,108,228,0.1)", border: "1px solid rgba(142,108,228,0.2)", borderRadius: "3px", color: "#ab8ff1" }}>
-            What projects am I working on?
+            How am I doing today?
           </div>
         </div>
         <div className="flex gap-2 justify-end">
           <div className="px-3 py-1.5 text-xs max-w-[80%]" style={{ background: "#0d0d12", border: "1px solid #31313a", borderRadius: "3px", color: "#aeaac0" }}>
-            You have 3 active projects: Memoir Desktop (AI companion), Pinchu (showcase), and a research paper...
+            You&apos;ve completed 3 of 5 tasks. Productivity score: 82%. 2 tasks pending — want me to focus on those?
           </div>
         </div>
       </div>
@@ -91,10 +96,10 @@ export default function StickyScroll() {
         >
           <span className="text-xs font-medium mb-4 block" style={{ color: "#8e6ce4", letterSpacing: "0.08em", textTransform: "uppercase" }}>The Flow</span>
           <h2 className="display-text text-4xl md:text-5xl font-bold mb-5">
-            From files to<br />intelligence
+            From tasks to<br />accomplishment
           </h2>
           <p className="text-sm max-w-lg leading-relaxed" style={{ color: "#8b8e9c" }}>
-            The complete workflow — scan, understand, recall.
+            The complete workflow — capture, track, assist.
           </p>
         </motion.div>
 
@@ -156,7 +161,6 @@ export default function StickyScroll() {
                 <div className="w-2.5 h-2.5 rounded-full" style={{ background: "#eab308" }} />
                 <div className="w-2.5 h-2.5 rounded-full" style={{ background: "#22c55e" }} />
                 <span className="ml-2 text-xs font-mono" style={{ color: "#62626f" }}>Pinchu — Live Preview</span>
-                {/* Step indicator */}
                 <div className="ml-auto flex gap-1.5">
                   {workflowSteps.map((_, i) => (
                     <div

@@ -15,7 +15,7 @@ export default function Hero() {
     <section ref={sectionRef} className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden pt-14">
       <div className="absolute inset-0 grid-pattern" />
 
-      {/* Aurora glow halos — stacked for depth */}
+      {/* Aurora glow halos */}
       <motion.div
         className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full pointer-events-none"
         style={{ background: "radial-gradient(circle, rgba(142,108,228,0.1) 0%, rgba(137,96,240,0.04) 40%, transparent 70%)", filter: "blur(60px)", opacity: auroraOpacity }}
@@ -24,13 +24,9 @@ export default function Hero() {
         className="absolute top-1/3 left-1/3 w-[400px] h-[400px] rounded-full pointer-events-none"
         style={{ background: "radial-gradient(circle, rgba(171,143,241,0.06) 0%, transparent 70%)", filter: "blur(80px)", opacity: auroraOpacity }}
       />
-      <motion.div
-        className="absolute top-[20%] right-[15%] w-[300px] h-[300px] rounded-full pointer-events-none"
-        style={{ background: "radial-gradient(circle, rgba(137,96,240,0.05) 0%, transparent 70%)", filter: "blur(70px)", opacity: auroraOpacity }}
-      />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center flex flex-col items-center">
-        {/* Character — floating with glow halo */}
+        {/* Character */}
         <motion.div
           initial={{ scale: 0, y: 30 }}
           animate={{ scale: 1, y: 0 }}
@@ -52,7 +48,7 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        {/* MASSIVE headline */}
+        {/* Headline */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -75,9 +71,9 @@ export default function Hero() {
           className="text-sm md:text-base max-w-md mx-auto mb-10 leading-relaxed"
           style={{ color: "#8b8e9c" }}
         >
-          It reads your files. It remembers your context.
+          Your AI productivity buddy.
           <br className="hidden md:block" />
-          You ask it questions like a person.
+          Plans your day, tracks your progress, keeps you focused.
         </motion.p>
 
         {/* CTAs */}
@@ -116,7 +112,7 @@ export default function Hero() {
           </a>
         </motion.div>
 
-        {/* Specs — with aurora accent dots */}
+        {/* Specs */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -126,17 +122,17 @@ export default function Hero() {
         >
           <span className="flex items-center gap-1.5">
             <span className="w-1 h-1 rounded-full" style={{ background: "#8e6ce4" }} />
-            30+ formats
+            AI-powered tasks
           </span>
           <span className="w-px h-3" style={{ background: "#31313a" }} />
           <span className="flex items-center gap-1.5">
             <span className="w-1 h-1 rounded-full" style={{ background: "#8960f0" }} />
-            100% local
+            Activity tracking
           </span>
           <span className="w-px h-3" style={{ background: "#31313a" }} />
           <span className="flex items-center gap-1.5">
             <span className="w-1 h-1 rounded-full" style={{ background: "#ab8ff1" }} />
-            Cognee-powered
+            Voice + Chat
           </span>
         </motion.div>
 
@@ -159,40 +155,47 @@ export default function Hero() {
                 pinchu-desktop
               </span>
             </div>
-            {/* Content */}
+            {/* Content — Dashboard mockup */}
             <div className="p-5 grid grid-cols-3 gap-4 min-h-[280px]" style={{ background: "#08080a" }}>
+              {/* Sidebar */}
+              <div className="space-y-2">
+                <div className="h-3.5 w-20 rounded-sm" style={{ background: "#17171c" }} />
+                {["Dashboard", "Tasks", "Summary", "Chat"].map((item) => (
+                  <div key={item} className="h-7 rounded-sm flex items-center px-2" style={{ background: item === "Dashboard" ? "rgba(142,108,228,0.15)" : "#0d0d12", border: "1px solid #17171c" }}>
+                    <span className="text-[9px] font-mono" style={{ color: item === "Dashboard" ? "#ab8ff1" : "#62626f" }}>{item}</span>
+                  </div>
+                ))}
+              </div>
+              {/* Main content */}
               <div className="col-span-2 space-y-3">
                 <div className="h-3.5 w-28 rounded-sm" style={{ background: "#17171c" }} />
-                <div className="h-2.5 w-full rounded-sm" style={{ background: "#0d0d12" }} />
-                <div className="h-2.5 w-4/5 rounded-sm" style={{ background: "#0d0d12" }} />
-                <div className="h-2.5 w-3/5 rounded-sm" style={{ background: "#0d0d12" }} />
-                <div className="mt-4 grid grid-cols-2 gap-3">
-                  {[...Array(4)].map((_, i) => (
-                    <motion.div
-                      key={i}
-                      className="h-16 rounded-sm"
-                      style={{ background: "#0d0d12", border: "1px solid #17171c" }}
-                      initial={{ opacity: 0, scale: 0.95 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ delay: 1.3 + i * 0.1 }}
-                    />
+                <div className="grid grid-cols-3 gap-2">
+                  {[
+                    { label: "Total", value: "5", color: "#ab8ff1" },
+                    { label: "Done", value: "3", color: "#22c55e" },
+                    { label: "Pending", value: "2", color: "#eab308" },
+                  ].map((stat) => (
+                    <div key={stat.label} className="h-16 rounded-sm flex flex-col items-center justify-center" style={{ background: "#0d0d12", border: "1px solid #17171c" }}>
+                      <span className="text-[9px]" style={{ color: "#62626f" }}>{stat.label}</span>
+                      <span className="text-sm font-bold" style={{ color: stat.color }}>{stat.value}</span>
+                    </div>
                   ))}
                 </div>
-              </div>
-              <div className="space-y-3">
-                <div className="h-3.5 w-20 rounded-sm" style={{ background: "#17171c" }} />
-                <motion.div
-                  className="h-28 rounded-sm flex items-center justify-center relative overflow-hidden"
-                  style={{ background: "#0d0d12", border: "1px solid #17171c" }}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 1.5 }}
-                >
-                  <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(circle at center, rgba(142,108,228,0.08) 0%, transparent 70%)" }} />
-                  <PinchuCharacter size={42} animated={true} />
-                </motion.div>
-                <div className="h-2.5 w-full rounded-sm" style={{ background: "#0d0d12" }} />
-                <div className="h-2.5 w-2/3 rounded-sm" style={{ background: "#0d0d12" }} />
+                <div className="space-y-1.5">
+                  {["Finish report", "30 min exercise", "Read 20 min"].map((task, i) => (
+                    <motion.div
+                      key={task}
+                      className="h-7 rounded-sm flex items-center gap-2 px-2"
+                      style={{ background: "#0d0d12", border: "1px solid #17171c" }}
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 1.3 + i * 0.1 }}
+                    >
+                      <div className="w-2 h-2 rounded-full" style={{ background: i < 3 ? "#22c55e" : "#eab308" }} />
+                      <span className="text-[9px]" style={{ color: "#aeaac0" }}>{task}</span>
+                    </motion.div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>

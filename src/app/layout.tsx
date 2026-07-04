@@ -2,34 +2,34 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Pinchu — Your AI Never Forgets",
+  title: "Pinchu — Your AI Productivity Buddy",
   description:
-    "A desktop AI companion that scans your files, builds a permanent knowledge graph, and lets you chat with your own memory across infinite sessions. Privacy-first. All data stays on your machine.",
+    "A desktop AI companion that manages your tasks, monitors your activity, and keeps you focused. Voice interaction, animated character, and Cognee cloud memory. All open source.",
   keywords: [
     "Pinchu",
-    "AI memory",
-    "knowledge graph",
+    "AI productivity",
+    "task management",
     "desktop AI",
     "privacy-first",
     "Cognee",
-    "personal AI",
-    "file scanner",
-    "memory management",
     "AI companion",
+    "activity monitoring",
+    "voice assistant",
+    "open source",
   ],
   openGraph: {
-    title: "Pinchu — Your AI Never Forgets",
+    title: "Pinchu — Your AI Productivity Buddy",
     description:
-      "Scan your files. Build a knowledge graph. Chat with your memory. All local, all private.",
+      "Manage tasks. Monitor activity. Stay focused. An AI productivity companion with voice, animation, and cloud memory.",
     type: "website",
     url: "https://pinchu.dev",
     images: ["/og-image.png"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pinchu — Your AI Never Forgets",
+    title: "Pinchu — Your AI Productivity Buddy",
     description:
-      "Scan your files. Build a knowledge graph. Chat with your memory. All local, all private.",
+      "Manage tasks. Monitor activity. Stay focused. An AI productivity companion with voice, animation, and cloud memory.",
   },
 };
 

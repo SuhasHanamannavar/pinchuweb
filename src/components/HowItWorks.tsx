@@ -1,33 +1,33 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FolderOpen, Brain, MessageSquare, ArrowRight } from "lucide-react";
+import { ListTodo, Brain, MessageSquare, ArrowRight } from "lucide-react";
 
 const steps = [
   {
-    icon: FolderOpen,
+    icon: ListTodo,
     number: "01",
-    title: "Scan Your Folders",
+    title: "Add Your Tasks",
     description:
-      "Point Memoir at your projects, notes, documents. It reads 30+ file formats and extracts knowledge automatically.",
+      "Type or speak your tasks in natural language. Pinchu classifies them, assigns priorities, and organizes your day automatically.",
     color: "violet",
     glow: "rgba(124, 58, 237, 0.3)",
   },
   {
     icon: Brain,
     number: "02",
-    title: "Build Knowledge Graph",
+    title: "Track Activity",
     description:
-      "Cognee extracts entities, relationships, and connections into a hybrid graph-vector knowledge store.",
+      "Pinchu monitors what you're doing in real-time — coding, browsing, working, or gaming. 12 activity types from foreground window analysis.",
     color: "cyan",
     glow: "rgba(6, 182, 212, 0.3)",
   },
   {
     icon: MessageSquare,
     number: "03",
-    title: "Chat with Your Memory",
+    title: "Stay Focused",
     description:
-      "Ask questions in natural language. Memoir recalls context from your entire digital life across infinite sessions.",
+      "Get daily summaries, productivity scores, and proactive nudges. Chat with Pinchu about your progress and what to do next.",
     color: "rose",
     glow: "rgba(244, 63, 94, 0.3)",
   },
@@ -37,7 +37,6 @@ export default function HowItWorks() {
   return (
     <section id="how-it-works" className="relative py-32">
       <div className="max-w-6xl mx-auto px-6">
-        {/* Section header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -45,22 +44,20 @@ export default function HowItWorks() {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <span className="text-sm text-cyan-400 font-medium tracking-wider uppercase mb-4 block">
+          <span className="text-sm font-medium tracking-wider uppercase mb-4 block" style={{ color: "#8e6ce4" }}>
             How It Works
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Three steps to{" "}
-            <span className="gradient-text">permanent memory</span>
+            <span className="gradient-text">better focus</span>
           </h2>
           <p className="text-lg text-slate-400 max-w-2xl mx-auto">
-            No cloud. No subscriptions. Just your files turning into
-            intelligent, searchable memory.
+            No complexity. Just your tasks turning into
+            organized, actionable plans.
           </p>
         </motion.div>
 
-        {/* Steps */}
         <div className="relative">
-          {/* Connection line */}
           <div className="hidden lg:block absolute top-24 left-[calc(16.67%+24px)] right-[calc(16.67%+24px)] h-px bg-gradient-to-r from-violet-500/50 via-cyan-500/50 to-rose-500/50" />
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -78,14 +75,10 @@ export default function HowItWorks() {
                 className="relative group"
               >
                 <div className="glass rounded-3xl p-8 text-center h-full">
-                  {/* Step number */}
-                  <div
-                    className="text-6xl font-black text-white/5 absolute top-4 right-6"
-                  >
+                  <div className="text-6xl font-black text-white/5 absolute top-4 right-6">
                     {step.number}
                   </div>
 
-                  {/* Icon */}
                   <div
                     className="w-16 h-16 rounded-2xl mx-auto mb-6 flex items-center justify-center relative"
                     style={{
@@ -106,7 +99,6 @@ export default function HowItWorks() {
                     {step.description}
                   </p>
 
-                  {/* Arrow (hidden on mobile, shown on desktop between cards) */}
                   {index < 2 && (
                     <div className="hidden lg:flex absolute top-24 -right-4 z-20 w-8 h-8 items-center justify-center">
                       <ArrowRight className="w-4 h-4 text-slate-600" />

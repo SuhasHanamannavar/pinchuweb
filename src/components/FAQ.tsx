@@ -7,23 +7,23 @@ import { ChevronDown } from "lucide-react";
 const faqs = [
   {
     question: "What is Pinchu?",
-    answer: "Pinchu is an AI memory companion for your desktop. It reads your files, builds a knowledge graph using Cognee, and lets you ask questions in natural language — 'What was I working on last week?' 'Where did I put that API doc?' It's like having a second brain that actually remembers.",
+    answer: "Pinchu is an AI productivity buddy for your desktop. It manages your tasks, monitors your activity, and keeps you focused with an animated character that floats on your screen. Think of it as a personal assistant that actually knows what you're doing.",
   },
   {
     question: "Is it really free?",
-    answer: "Yes. Pinchu is MIT-licensed open source. No subscriptions, no premium tiers, no data harvesting. You bring your own LLM API key (OpenAI, Anthropic, or any compatible provider) and everything else runs locally on your machine.",
+    answer: "Yes. Pinchu is MIT-licensed open source. No subscriptions, no premium tiers, no data harvesting. You bring your own LLM API key (OpenAI, Anthropic, or any compatible provider) and everything else runs on your machine or Cognee cloud.",
   },
   {
-    question: "How does Cognee work inside Pinchu?",
-    answer: "Pinchu uses Cognee's full memory lifecycle: remember (ingest files into the knowledge graph), recall (hybrid graph+vector retrieval), improve (enrich with triplet embeddings and bridge sessions), and forget (delete data when no longer needed). It uses custom DataPoint models built specifically for personal memory.",
+    question: "How does the activity monitoring work?",
+    answer: "Pinchu tracks your foreground window to detect what you're doing — coding, browsing, watching videos, or gaming. It recognizes 12 activity types and uses this context to provide smarter suggestions and productivity insights.",
   },
   {
-    question: "What file formats does it support?",
-    answer: "30+ formats including .txt, .md, .pdf, .docx, .py, .js, .ts, .json, .csv, .html, .css, and more. It uses hash-based incremental scanning so it only processes new or changed files. You can also set up a file watcher for automatic detection.",
+    question: "What about the Cognee cloud integration?",
+    answer: "Pinchu uses Cognee cloud as a cognitive memory layer. It learns your work patterns, preferences, and productivity rhythms over time. When offline, it falls back to local JSON storage so you always have full functionality.",
   },
   {
     question: "Does my data leave my machine?",
-    answer: "No. Pinchu uses Kuzu (graph database), LanceDB (vector database), and FastEmbed (embeddings) — all running locally. The only external call is to your LLM provider for chat responses. Your knowledge graph, file content, and embeddings never leave your device.",
+    answer: "Your task data is stored locally by default. Cognee cloud sync is optional — when enabled, your data is encrypted and synced to your personal cloud space. The only external calls are to your LLM provider for chat responses and Cognee for memory (if enabled).",
   },
 ];
 

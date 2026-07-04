@@ -15,7 +15,6 @@ function GithubIcon({ className }: { className?: string }) {
 export default function DownloadCTA() {
   return (
     <section id="download" className="relative py-32">
-      {/* Aurora glow behind — stronger */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] rounded-full blur-[140px]" style={{ background: "rgba(142, 108, 228, 0.09)" }} />
         <div className="absolute top-1/2 left-1/3 -translate-y-1/2 w-[300px] h-[300px] rounded-full blur-[100px]" style={{ background: "rgba(171, 143, 241, 0.05)" }} />
@@ -30,10 +29,8 @@ export default function DownloadCTA() {
           style={{ border: "1px solid #31313a", borderRadius: "3px", background: "#0d0d12" }}
           className="p-10 text-center relative overflow-hidden"
         >
-          {/* Top aurora accent line */}
           <div className="absolute top-0 left-0 right-0 h-px" style={{ background: "linear-gradient(90deg, transparent, rgba(142,108,228,0.4), transparent)" }} />
 
-          {/* Shimmer sweep across card */}
           <motion.div
             className="absolute inset-0 pointer-events-none"
             style={{ background: "linear-gradient(90deg, transparent, rgba(142,108,228,0.03), transparent)" }}
@@ -41,7 +38,6 @@ export default function DownloadCTA() {
             transition={{ duration: 6, repeat: Infinity, ease: "linear", repeatDelay: 2 }}
           />
 
-          {/* Floating character with glow */}
           <motion.div
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
@@ -64,11 +60,11 @@ export default function DownloadCTA() {
           </motion.div>
 
           <h2 className="display-text text-3xl md:text-4xl font-bold mb-3">
-            Start remembering
+            Start focusing
           </h2>
           <p className="max-w-md mx-auto mb-10 text-xs leading-relaxed" style={{ color: "#8b8e9c" }}>
-            Free and open source. Download Pinchu, point it at a folder,
-            and ask it what you were working on.
+            Free and open source. Download Pinchu, add your tasks,
+            and let it help you stay on track.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8">

@@ -2,18 +2,18 @@
 
 import { motion } from "framer-motion";
 import {
-  Brain, FileSearch, MessageSquare, Shield, Mic, Eye, BarChart3, Cpu,
+  ListTodo, Activity, MonitorSpeaker, MessageSquare, Shield, Mic, BarChart3, Cloud,
 } from "lucide-react";
 
 const features = [
-  { icon: FileSearch, title: "Smart File Scanner", description: "Reads .txt, .md, .pdf, .docx, .py, .js and 30+ formats. Incremental scanning with hash-based cache.", color: "#ab8ff1" },
-  { icon: Brain, title: "Knowledge Graph", description: "Visualizes how your topics, projects, and interests connect. Custom DataPoint models for personal memory.", color: "#8960f0" },
-  { icon: MessageSquare, title: "Chat with Memory", description: "Ask anything — 'What was I working on last week?' Hybrid graph+vector retrieval for context-rich answers.", color: "#8e6ce4" },
-  { icon: Eye, title: "Desktop Character", description: "Pinchu — your animated companion that reacts to your activity. Always-on-top overlay with voice and personality.", color: "#ab8ff1" },
-  { icon: Mic, title: "Voice Interaction", description: "Pikachu mode + push-to-talk voice input. Edge-TTS for speech, faster-whisper for recognition.", color: "#8960f0" },
-  { icon: Shield, title: "Privacy-First", description: "All data stays on your machine. Zero cloud uploads. Kuzu graph + LanceDB vectors + FastEmbed.", color: "#8e6ce4" },
-  { icon: BarChart3, title: "Activity Detection", description: "Knows when you're coding, gaming, watching, or working. 12 activity types from foreground window analysis.", color: "#ab8ff1" },
-  { icon: Cpu, title: "Cognee Lifecycle", description: "Full remember → recall → improve → forget cycle. Session bridging persists chats to permanent memory.", color: "#8960f0" },
+  { icon: ListTodo, title: "AI Task Management", description: "Natural language task input with automatic classification, priority assignment, and deadline detection. Pinchu organizes your day.", color: "#ab8ff1" },
+  { icon: Activity, title: "Activity Monitoring", description: "Tracks what you're doing in real-time — coding, browsing, gaming, or working. 12 activity types from foreground window analysis.", color: "#8960f0" },
+  { icon: MonitorSpeaker, title: "Desktop Overlay", description: "Pinchu floats on your screen as an animated companion. Always visible, always aware of your context and progress.", color: "#8e6ce4" },
+  { icon: MessageSquare, title: "AI Chat", description: "Ask anything about your tasks, schedule, or what you were doing. Pinchu remembers your conversation history across sessions.", color: "#ab8ff1" },
+  { icon: Mic, title: "Voice Interaction", description: "Push-to-talk voice input with speech recognition. Pinchu speaks back with text-to-speech summaries and nudges.", color: "#8960f0" },
+  { icon: BarChart3, title: "Daily Summaries", description: "Auto-generated progress reports with productivity scores. See what you accomplished and what needs attention.", color: "#8e6ce4" },
+  { icon: Cloud, title: "Cognee Cloud Memory", description: "Cognitive memory layer in the cloud. Pinchu learns your patterns, preferences, and context over time.", color: "#ab8ff1" },
+  { icon: Shield, title: "Privacy-First", description: "Your data stays yours. Local JSON storage with optional cloud sync. No telemetry, no tracking, no subscriptions.", color: "#8960f0" },
 ];
 
 const container = {
@@ -29,7 +29,6 @@ const item = {
 export default function Features() {
   return (
     <section id="features" className="relative py-32 aurora-section-glow">
-      {/* Ambient glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] pointer-events-none" style={{ background: "radial-gradient(ellipse, rgba(142,108,228,0.04) 0%, transparent 70%)", filter: "blur(80px)" }} />
 
       <div className="max-w-6xl mx-auto px-6 relative z-10">
@@ -42,10 +41,10 @@ export default function Features() {
         >
           <span className="text-xs font-medium mb-4 block" style={{ color: "#8e6ce4", letterSpacing: "0.08em", textTransform: "uppercase" }}>Features</span>
           <h2 className="display-text text-4xl md:text-5xl font-bold mb-5">
-            Everything your memory<br />needs
+            Everything you need<br />to stay on track
           </h2>
           <p className="text-sm max-w-lg leading-relaxed" style={{ color: "#8b8e9c" }}>
-            A complete AI memory system that scans, understands, and recalls everything on your machine.
+            An AI productivity assistant that manages your tasks, monitors your activity, and keeps you focused — all from your desktop.
           </p>
         </motion.div>
 
@@ -67,7 +66,6 @@ export default function Features() {
                 }}
                 transition={{ duration: 0.3 }}
               >
-                {/* Hover glow accent — aurora radial */}
                 <motion.div
                   className="absolute top-0 left-0 w-32 h-32 pointer-events-none"
                   style={{ background: `radial-gradient(circle at 0% 0%, ${feature.color}10 0%, ${feature.color}04 40%, transparent 70%)` }}
