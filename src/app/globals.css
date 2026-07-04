@@ -1,26 +1,279 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-void: #08080a;
+  --color-charcoal: #0d0d12;
+  --color-graphite: #17171c;
+  --color-slate: #25252d;
+  --color-iron: #31313a;
+  --color-ash: #62626f;
+  --color-fog: #8b8e9c;
+  --color-pearl: #aeaac0;
+  --color-chalk: #dad7de;
+  --color-lavender-beam: #ab8ff1;
+  --color-iris-glow: #8960f0;
+  --color-webgl-aurora: #8e6ce4;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-void: var(--color-void);
+  --color-charcoal: var(--color-charcoal);
+  --color-graphite: var(--color-graphite);
+  --color-slate: var(--color-slate);
+  --color-iron: var(--color-iron);
+  --color-ash: var(--color-ash);
+  --color-fog: var(--color-fog);
+  --color-pearl: var(--color-pearl);
+  --color-chalk: var(--color-chalk);
+  --color-lavender: var(--color-lavender-beam);
+  --color-iris: var(--color-iris-glow);
+  --color-aurora: var(--color-webgl-aurora);
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, "Cascadia Code", "Fira Code", "JetBrains Mono", monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(142, 108, 228, 0.2) transparent;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-void);
+  color: var(--color-pearl);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: -0.01em;
 }
+
+h1, h2, h3 {
+  color: var(--color-chalk);
+}
+
+.display-text {
+  font-family: var(--font-display);
+  letter-spacing: -0.063em;
+  line-height: 0.9;
+  color: var(--color-chalk);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #ab8ff1 0%, #8e6ce4 30%, #8960f0 60%, #ab8ff1 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 6s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.glass {
+  background: var(--color-charcoal);
+  border: 1px solid var(--color-iron);
+  border-radius: 3px;
+  transition: border-color 0.3s ease;
+  position: relative;
+}
+
+.glass:hover {
+  border-color: rgba(142, 108, 228, 0.25);
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-pearl);
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-chalk);
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: var(--color-chalk);
+  color: var(--color-void);
+  font-weight: 500;
+  font-size: 14px;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: -0.01em;
+}
+
+.btn-primary:hover {
+  background: white;
+  box-shadow: 0 0 60px rgba(255, 255, 255, 0.1), 0 0 120px rgba(142, 108, 228, 0.08);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: transparent;
+  color: var(--color-pearl);
+  font-weight: 500;
+  font-size: 14px;
+  border-radius: 3px;
+  border: 1px solid var(--color-iron);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: -0.01em;
+}
+
+.btn-secondary:hover {
+  border-color: var(--color-webgl-aurora);
+  color: var(--color-chalk);
+  box-shadow: 0 0 40px rgba(142, 108, 228, 0.06);
+}
+
+.section-separator {
+  height: 1px;
+  background: var(--color-iron);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid-pattern {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.012) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.012) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+
+.glow-violet {
+  box-shadow:
+    0 0 60px rgba(142, 108, 228, 0.08),
+    0 0 120px rgba(142, 108, 228, 0.04);
+}
+
+.glow-soft {
+  box-shadow:
+    0 0 80px rgba(142, 108, 228, 0.06),
+    0 0 200px rgba(142, 108, 228, 0.03);
+}
+
+.aurora-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(142, 108, 228, 0.3), transparent);
+}
+
+/* Section transition — aurora glow bleed */
+.aurora-section-glow {
+  position: relative;
+}
+
+.aurora-section-glow::after {
+  content: '';
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 80px;
+  background: radial-gradient(ellipse, rgba(142, 108, 228, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+  filter: blur(30px);
+}
+
+/* Hairline violet underline for links */
+.link-violet {
+  position: relative;
+  text-decoration: none;
+  color: var(--color-pearl);
+  transition: color 0.2s ease;
+}
+
+.link-violet::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--color-webgl-aurora);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.link-violet:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.link-violet:hover {
+  color: var(--color-chalk);
+}
+
+/* Shimmer sweep effect */
+.shimmer-sweep {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-sweep::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
+  animation: shimmerSweep 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes shimmerSweep {
+  0%, 100% { transform: translateX(-100%); }
+  50% { transform: translateX(200%); }
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+.animate-float { animation: float 6s ease-in-out infinite; }
+.animate-float-delayed { animation: float 6s ease-in-out 2s infinite; }
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(142, 108, 228, 0.05); }
+  50% { box-shadow: 0 0 40px rgba(142, 108, 228, 0.12); }
+}
+
+@keyframes aurora-drift {
+  0%, 100% { opacity: 0.4; transform: translateX(0); }
+  50% { opacity: 0.7; transform: translateX(10px); }
+}
+
+@keyframes aurora-pulse {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.05); }
+}
+
+@keyframes glow-breathe {
+  0%, 100% { box-shadow: 0 0 30px rgba(142,108,228,0.08), 0 0 60px rgba(142,108,228,0.04); }
+  50% { box-shadow: 0 0 50px rgba(142,108,228,0.12), 0 0 100px rgba(142,108,228,0.06); }
+}
+
+::selection {
+  background: rgba(142, 108, 228, 0.25);
+  color: var(--color-chalk);
+}
+
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--color-iron); border-radius: 2px; }
