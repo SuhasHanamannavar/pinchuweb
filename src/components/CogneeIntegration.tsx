@@ -31,7 +31,7 @@ export default function CogneeIntegration() {
           <h2 className="display-text text-4xl md:text-5xl font-bold mb-5">
             Cognitive memory<br />that grows with you
           </h2>
-          <p className="text-sm max-w-lg leading-relaxed" style={{ color: "#8b8e9c" }}>
+          <p className="text-base max-w-lg leading-relaxed" style={{ color: "#8b8e9c" }}>
             Pinchu uses Cognee cloud to build a memory that understands your work patterns, learns your preferences, and helps you stay focused.
           </p>
         </motion.div>
@@ -56,7 +56,7 @@ export default function CogneeIntegration() {
                     <h3 className="text-sm font-semibold font-mono" style={{ color: "#dad7de" }}>{op.name}</h3>
                     <span className="text-[10px] font-mono" style={{ color: "#62626f" }}>{op.action}</span>
                   </div>
-                  <p className="text-xs leading-relaxed" style={{ color: "#8b8e9c" }}>{op.description}</p>
+                   <p className="text-sm leading-relaxed" style={{ color: "#8b8e9c" }}>{op.description}</p>
                 </div>
               </div>
             </motion.div>

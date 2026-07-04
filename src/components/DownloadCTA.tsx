@@ -62,7 +62,7 @@ export default function DownloadCTA() {
           <h2 className="display-text text-3xl md:text-4xl font-bold mb-3">
             Start focusing
           </h2>
-          <p className="max-w-md mx-auto mb-10 text-xs leading-relaxed" style={{ color: "#8b8e9c" }}>
+          <p className="max-w-md mx-auto mb-10 text-base leading-relaxed" style={{ color: "#8b8e9c" }}>
             Free and open source. Download Pinchu, run it,
             and start having a productive day.
           </p>

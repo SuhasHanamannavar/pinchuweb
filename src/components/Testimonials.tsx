@@ -1,31 +1,33 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Quote } from "lucide-react";
+import { Brain, Zap, Database, Lock, ArrowRight } from "lucide-react";
 
-const testimonials = [
+const reasons = [
   {
-    quote: "I used to juggle five different to-do apps. Pinchu replaced them all — and it actually knows what I'm working on.",
-    author: "Shubham",
-    role: "Full-stack dev, uses Pinchu daily",
+    icon: Brain,
+    title: "It remembers what you forget",
+    description: "Pinchu doesn't just store tasks — it builds context. What you were working on yesterday. Which projects need attention. When you're most focused. Cognee turns raw activity into understanding.",
+    color: "#ab8ff1",
   },
   {
-    quote: "The activity monitoring is underrated. Seeing my focus patterns helped me restructure my day. I'm 40% more productive now.",
-    author: "Kavya",
-    role: "Freelance designer, productivity enthusiast",
+    icon: Zap,
+    title: "It learns your rhythm",
+    description: "Every task you complete, every window you switch to, every break you take — Cognee absorbs it. Over time, Pinchu knows your productivity patterns better than you do.",
+    color: "#8960f0",
   },
   {
-    quote: "The animated character sounds gimmicky until you have it. The little nudge when I've been idle for 20 minutes actually works.",
-    author: "Arjun",
-    role: "Backend engineer, remote worker",
+    icon: Database,
+    title: "Memory that bridges sessions",
+    description: "Close Pinchu, reopen it a week later — it still knows your context. Cognee's cognitive memory persists across sessions, making every conversation smarter than the last.",
+    color: "#8e6ce4",
   },
-];
-
-const stats = [
-  { value: "12", label: "Activity Types" },
-  { value: "4", label: "AI Views" },
-  { value: "3", label: "Input Modes" },
-  { value: "∞", label: "Sessions" },
+  {
+    icon: Lock,
+    title: "Yours first, always",
+    description: "Cognee gives you cloud memory without sacrificing privacy. Your data is encrypted, synced, and yours. No selling, no tracking. Just intelligence that respects you.",
+    color: "#ab8ff1",
+  },
 ];
 
 export default function Testimonials() {
@@ -33,58 +35,67 @@ export default function Testimonials() {
     <section id="testimonials" className="relative py-32">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.5 }}
-          style={{ border: "1px solid #31313a", borderRadius: "3px", background: "#0d0d12" }}
-          className="p-8 mb-20"
-        >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat) => (
-              <div key={stat.label} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold mb-1" style={{ color: "#dad7de" }}>{stat.value}</div>
-                <div className="text-xs" style={{ color: "#62626f" }}>{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </motion.div>
-
-        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="mb-12"
+          className="mb-20"
         >
-          <span className="text-xs font-medium mb-4 block" style={{ color: "#8e6ce4", letterSpacing: "0.08em", textTransform: "uppercase" }}>From the people using it</span>
-          <h2 className="display-text text-4xl md:text-5xl font-bold">
-            Actually useful
+          <span className="text-xs font-medium mb-4 block" style={{ color: "#8e6ce4", letterSpacing: "0.08em", textTransform: "uppercase" }}>Why Cognee matters</span>
+          <h2 className="display-text text-4xl md:text-5xl font-bold mb-5">
+            Not just memory.<br />Understanding.
           </h2>
+          <p className="text-sm max-w-lg leading-relaxed" style={{ color: "#8b8e9c" }}>
+            Most to-do apps forget everything when you close them. Pinchu doesn&apos;t.
+            Cognee gives it a brain that grows with you.
+          </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-px" style={{ background: "#31313a" }}>
-          {testimonials.map((t, i) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-px mb-16" style={{ background: "#31313a" }}>
+          {reasons.map((r, i) => (
             <motion.div
-              key={t.author}
+              key={r.title}
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
               style={{ background: "#08080a" }}
-              className="p-6 flex flex-col"
+              className="p-8"
             >
-              <Quote className="w-4 h-4 mb-4 flex-shrink-0" style={{ color: "#31313a" }} />
-              <p className="leading-relaxed mb-6 text-sm flex-1" style={{ color: "#aeaac0" }}>
-                &ldquo;{t.quote}&rdquo;
-              </p>
-              <div className="pt-4" style={{ borderTop: "1px solid #17171c" }}>
-                <div className="text-xs font-semibold" style={{ color: "#dad7de" }}>{t.author}</div>
-                <div className="text-[10px]" style={{ color: "#62626f" }}>{t.role}</div>
+              <div className="flex items-start gap-5">
+                <div className="w-11 h-11 flex items-center justify-center flex-shrink-0" style={{ borderRadius: "3px", background: "#0d0d12", border: "1px solid #17171c" }}>
+                  <r.icon className="w-5 h-5" style={{ color: r.color }} />
+                </div>
+                <div>
+                  <h3 className="text-base font-semibold mb-2" style={{ color: "#dad7de" }}>{r.title}</h3>
+                  <p className="text-sm leading-relaxed" style={{ color: "#8b8e9c" }}>{r.description}</p>
+                </div>
               </div>
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center"
+        >
+          <p className="text-base mb-6" style={{ color: "#8b8e9c" }}>
+            Without Cognee, Pinchu is a to-do list. <span style={{ color: "#dad7de" }}>With it, Pinchu is a companion.</span>
+          </p>
+          <a
+            href="https://docs.cognee.ai"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-sm font-medium transition-colors"
+            style={{ color: "#8e6ce4" }}
+          >
+            Learn more about Cognee
+            <ArrowRight className="w-4 h-4" />
+          </a>
+        </motion.div>
       </div>
     </section>
   );

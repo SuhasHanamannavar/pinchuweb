@@ -43,7 +43,7 @@ export default function Features() {
           <h2 className="display-text text-4xl md:text-5xl font-bold mb-5">
             Everything you need<br />to stay on track
           </h2>
-          <p className="text-sm max-w-lg leading-relaxed" style={{ color: "#8b8e9c" }}>
+          <p className="text-base max-w-lg leading-relaxed" style={{ color: "#8b8e9c" }}>
             An AI productivity assistant that manages your tasks, monitors your activity, and keeps you focused — all from your desktop.
           </p>
         </motion.div>
@@ -79,8 +79,8 @@ export default function Features() {
                 >
                   <feature.icon className="w-5 h-5" style={{ color: feature.color }} />
                 </div>
-                <h3 className="text-sm font-semibold mb-2 relative" style={{ color: "#dad7de" }}>{feature.title}</h3>
-                <p className="text-xs leading-relaxed relative" style={{ color: "#8b8e9c" }}>{feature.description}</p>
+                <h3 className="text-base font-semibold mb-2 relative" style={{ color: "#dad7de" }}>{feature.title}</h3>
+                <p className="text-sm leading-relaxed relative" style={{ color: "#8b8e9c" }}>{feature.description}</p>
               </motion.div>
             </motion.div>
           ))}

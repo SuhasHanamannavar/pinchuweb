@@ -98,7 +98,7 @@ export default function StickyScroll() {
           <h2 className="display-text text-4xl md:text-5xl font-bold mb-5">
             From tasks to<br />accomplishment
           </h2>
-          <p className="text-sm max-w-lg leading-relaxed" style={{ color: "#8b8e9c" }}>
+          <p className="text-base max-w-lg leading-relaxed" style={{ color: "#8b8e9c" }}>
             The complete workflow — capture, track, assist.
           </p>
         </motion.div>
@@ -131,7 +131,7 @@ export default function StickyScroll() {
                       <h3 className="text-sm font-semibold" style={{ color: "#dad7de" }}>{step.title}</h3>
                       <span className="text-[10px]" style={{ color: "#62626f" }}>— {step.subtitle}</span>
                     </div>
-                    <p className="text-xs leading-relaxed mb-3" style={{ color: "#8b8e9c" }}>{step.description}</p>
+                    <p className="text-sm leading-relaxed mb-3" style={{ color: "#8b8e9c" }}>{step.description}</p>
                     <div className="flex flex-wrap gap-1.5">
                       {step.details.map((d) => (
                         <span key={d} className="px-2 py-0.5 text-[10px]" style={{ background: "#08080a", border: "1px solid #17171c", borderRadius: "3px", color: "#62626f" }}>

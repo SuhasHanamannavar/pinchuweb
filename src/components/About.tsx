@@ -19,7 +19,7 @@ export default function About() {
             <h2 className="display-text text-4xl md:text-5xl font-bold mb-6">
               Built because I<br />kept losing focus
             </h2>
-            <div className="space-y-4 text-sm leading-relaxed" style={{ color: "#8b8e9c" }}>
+            <div className="space-y-4 text-base leading-relaxed" style={{ color: "#8b8e9c" }}>
               <p>
                 I&apos;d start a task, get distracted by a notification, and forget what I was doing.
                 My to-do lists were scattered across sticky notes, apps, and half-remembered thoughts.
@@ -72,7 +72,7 @@ export default function About() {
                   </div>
                   <div>
                     <h3 className="text-sm font-semibold mb-1" style={{ color: "#dad7de" }}>{value.title}</h3>
-                    <p className="text-xs leading-relaxed" style={{ color: "#8b8e9c" }}>{value.description}</p>
+                    <p className="text-sm leading-relaxed" style={{ color: "#8b8e9c" }}>{value.description}</p>
                   </div>
                 </div>
               </motion.div>

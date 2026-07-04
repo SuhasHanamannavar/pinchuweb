@@ -68,7 +68,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.55 }}
-          className="text-sm md:text-base max-w-md mx-auto mb-10 leading-relaxed"
+          className="text-base md:text-lg max-w-md mx-auto mb-10 leading-relaxed"
           style={{ color: "#8b8e9c" }}
         >
           Your AI productivity buddy.
