@@ -63,15 +63,14 @@ export default function DownloadCTA() {
             Start focusing
           </h2>
           <p className="max-w-md mx-auto mb-10 text-xs leading-relaxed" style={{ color: "#8b8e9c" }}>
-            Free and open source. Download Pinchu, add your tasks,
-            and let it help you stay on track.
+            Free and open source. Download Pinchu, run it,
+            and start having a productive day.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8">
             <motion.a
-              href="https://github.com/SuhasHanamannavar/pinchu"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="https://github.com/SuhasHanamannavar/pinchu/releases/download/v1.0.0/Pinchu.exe"
+              download="Pinchu.exe"
               className="btn-primary relative overflow-hidden"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
@@ -82,8 +81,8 @@ export default function DownloadCTA() {
                 animate={{ x: ["-100%", "200%"] }}
                 transition={{ duration: 2.5, repeat: Infinity, ease: "linear", repeatDelay: 3 }}
               />
-              <Sparkles className="w-4 h-4" />
-              Get Pinchu
+              <Download className="w-4 h-4" />
+              Download for Windows
             </motion.a>
             <a
               href="https://github.com/SuhasHanamannavar/pinchu"
@@ -104,9 +103,9 @@ export default function DownloadCTA() {
           <div className="max-w-md mx-auto p-4 text-left" style={{ background: "#08080a", border: "1px solid #17171c", borderRadius: "3px" }}>
             <p className="text-[10px] font-medium mb-2" style={{ color: "#8e6ce4" }}>Quick start</p>
             <div className="space-y-1 font-mono text-[10px]" style={{ color: "#8b8e9c" }}>
-              <p><span style={{ color: "#62626f" }}>$</span> git clone https://github.com/SuhasHanamannavar/pinchu.git</p>
-              <p><span style={{ color: "#62626f" }}>$</span> pip install -r requirements.txt</p>
-              <p><span style={{ color: "#62626f" }}>$</span> python main.py</p>
+              <p>1. Download Pinchu.exe above</p>
+              <p>2. Run it — no installation needed</p>
+              <p>3. Enter your LLM API key when prompted</p>
             </div>
           </div>
 
