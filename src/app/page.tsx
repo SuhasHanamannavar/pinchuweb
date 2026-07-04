@@ -5,6 +5,7 @@ import Features from "@/components/Features";
 import CharacterShowcase from "@/components/CharacterShowcase";
 import StickyScroll from "@/components/StickyScroll";
 import CogneeIntegration from "@/components/CogneeIntegration";
+import InsightsShowcase from "@/components/InsightsShowcase";
 import FAQ from "@/components/FAQ";
 import Testimonials from "@/components/Testimonials";
 import DownloadCTA from "@/components/DownloadCTA";
@@ -30,9 +31,11 @@ export default function Home() {
         <div className="section-separator" />
         <CogneeIntegration />
         <div className="section-separator" />
-        <FAQ />
+        <InsightsShowcase />
         <div className="section-separator" />
         <Testimonials />
+        <div className="section-separator" />
+        <FAQ />
         <DownloadCTA />
       </main>
       <Footer />
