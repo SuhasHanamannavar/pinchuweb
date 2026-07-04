@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import {
-  ListTodo, Activity, MonitorSpeaker, MessageSquare, Shield, Mic, BarChart3, Cloud,
+  ListTodo, Activity, MonitorSpeaker, MessageSquare, Shield, Mic, BarChart3, Cloud, Laptop,
 } from "lucide-react";
 
 const features = [
@@ -13,7 +13,7 @@ const features = [
   { icon: Mic, title: "Voice Interaction", description: "Push-to-talk voice input with speech recognition. Pinchu speaks back with text-to-speech summaries and nudges.", color: "#8960f0" },
   { icon: BarChart3, title: "Daily Summaries", description: "Auto-generated progress reports with productivity scores. See what you accomplished and what needs attention.", color: "#8e6ce4" },
   { icon: Cloud, title: "Cognee Cloud Memory", description: "Cognitive memory layer in the cloud. Pinchu learns your patterns, preferences, and context over time.", color: "#ab8ff1" },
-  { icon: Shield, title: "Privacy-First", description: "Your data stays yours. Local JSON storage with optional cloud sync. No telemetry, no tracking, no subscriptions.", color: "#8960f0" },
+  { icon: Laptop, title: "Cross-Platform", description: "Works on Windows and macOS. Same features, same character, same experience across both platforms.", color: "#8960f0" },
 ];
 
 const container = {

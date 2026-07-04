@@ -12,6 +12,22 @@ function GithubIcon({ className }: { className?: string }) {
   );
 }
 
+function AppleIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+    </svg>
+  );
+}
+
+function WindowsIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M3 12V6.75L9.658 5.849V12H3ZM10.658 5.679L21 3.5V12H10.658V5.679ZM3 13H9.658V19.151L3 18.25V13ZM10.658 13H21V20.5L10.658 18.321V13Z" />
+    </svg>
+  );
+}
+
 export default function DownloadCTA() {
   return (
     <section id="download" className="relative py-32">
@@ -81,8 +97,24 @@ export default function DownloadCTA() {
                 animate={{ x: ["-100%", "200%"] }}
                 transition={{ duration: 2.5, repeat: Infinity, ease: "linear", repeatDelay: 3 }}
               />
-              <Download className="w-4 h-4" />
+              <WindowsIcon className="w-4 h-4" />
               Download for Windows
+            </motion.a>
+            <motion.a
+              href="https://github.com/SuhasHanamannavar/pinchu/releases/download/v1.0.0/Pinchu-macOS.zip"
+              download="Pinchu-macOS.zip"
+              className="btn-primary relative overflow-hidden"
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
+            >
+              <motion.div
+                className="absolute inset-0 pointer-events-none"
+                style={{ background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent)" }}
+                animate={{ x: ["-100%", "200%"] }}
+                transition={{ duration: 2.5, repeat: Infinity, ease: "linear", repeatDelay: 3 }}
+              />
+              <AppleIcon className="w-4 h-4" />
+              Download for macOS
             </motion.a>
             <a
               href="https://github.com/SuhasHanamannavar/pinchu"
@@ -96,15 +128,16 @@ export default function DownloadCTA() {
           </div>
 
           <div className="flex items-center justify-center gap-5 text-xs mb-6" style={{ color: "#62626f" }}>
-            <span className="flex items-center gap-1.5"><Monitor className="w-3 h-3" /> Windows</span>
+            <span className="flex items-center gap-1.5"><WindowsIcon className="w-3 h-3" /> Windows</span>
+            <span className="flex items-center gap-1.5"><AppleIcon className="w-3 h-3" /> macOS</span>
             <span className="flex items-center gap-1.5"><Terminal className="w-3 h-3" /> Python 3.10+</span>
           </div>
 
           <div className="max-w-md mx-auto p-4 text-left" style={{ background: "#08080a", border: "1px solid #17171c", borderRadius: "3px" }}>
             <p className="text-[10px] font-medium mb-2" style={{ color: "#8e6ce4" }}>Quick start</p>
             <div className="space-y-1 font-mono text-[10px]" style={{ color: "#8b8e9c" }}>
-              <p>1. Download Pinchu.zip above</p>
-              <p>2. Extract and run Pinchu.exe</p>
+              <p>1. Download Pinchu for your platform above</p>
+              <p>2. Extract and run Pinchu (Windows) or Pinchu.app (macOS)</p>
               <p>3. Enter your LLM API key when prompted</p>
             </div>
           </div>

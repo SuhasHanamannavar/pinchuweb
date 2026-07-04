@@ -134,6 +134,11 @@ export default function Hero() {
             <span className="w-1 h-1 rounded-full" style={{ background: "#ab8ff1" }} />
             Voice + Chat
           </span>
+          <span className="w-px h-3" style={{ background: "#31313a" }} />
+          <span className="flex items-center gap-1.5">
+            <span className="w-1 h-1 rounded-full" style={{ background: "#22c55e" }} />
+            Windows + macOS
+          </span>
         </motion.div>
 
         {/* Product preview */}
