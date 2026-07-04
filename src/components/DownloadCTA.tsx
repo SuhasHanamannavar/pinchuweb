@@ -69,8 +69,8 @@ export default function DownloadCTA() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8">
             <motion.a
-              href="https://github.com/SuhasHanamannavar/pinchu/releases/download/v1.0.0/Pinchu.exe"
-              download="Pinchu.exe"
+              href="https://github.com/SuhasHanamannavar/pinchu/releases/download/v1.0.0/Pinchu.zip"
+              download="Pinchu.zip"
               className="btn-primary relative overflow-hidden"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
@@ -103,8 +103,8 @@ export default function DownloadCTA() {
           <div className="max-w-md mx-auto p-4 text-left" style={{ background: "#08080a", border: "1px solid #17171c", borderRadius: "3px" }}>
             <p className="text-[10px] font-medium mb-2" style={{ color: "#8e6ce4" }}>Quick start</p>
             <div className="space-y-1 font-mono text-[10px]" style={{ color: "#8b8e9c" }}>
-              <p>1. Download Pinchu.exe above</p>
-              <p>2. Run it — no installation needed</p>
+              <p>1. Download Pinchu.zip above</p>
+              <p>2. Extract and run Pinchu.exe</p>
               <p>3. Enter your LLM API key when prompted</p>
             </div>
           </div>
