@@ -9,7 +9,7 @@ const navLinks = [
   { label: "Character", href: "#character" },
   { label: "Workflow", href: "#workflow" },
   { label: "Integrations", href: "#integrations" },
-  { label: "Testimonials", href: "#testimonials" },
+  { label: "Insights", href: "#insights" },
 ];
 
 export default function Navbar() {
@@ -30,7 +30,7 @@ export default function Navbar() {
       <div className="relative max-w-6xl mx-auto px-6 h-12 flex items-center justify-between">
         <a href="/" className="flex items-center gap-2 relative z-10">
           <PinchuCharacter size={18} animated={false} />
-          <span className="text-[13px] font-medium" style={{ color: "#dad7de", letterSpacing: "-0.02em" }}>pinchu</span>
+          <span className="text-sm font-medium" style={{ color: "#dad7de", letterSpacing: "-0.02em" }}>pinchu</span>
         </a>
 
         <div className="hidden md:flex items-center gap-6">
@@ -38,7 +38,7 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-[11px] font-medium transition-colors duration-200"
+              className="text-xs font-medium transition-colors duration-200"
               style={{ color: "#8b8e9c", letterSpacing: "-0.01em" }}
               onMouseEnter={(e) => (e.currentTarget.style.color = "#dad7de")}
               onMouseLeave={(e) => (e.currentTarget.style.color = "#8b8e9c")}
@@ -53,14 +53,14 @@ export default function Navbar() {
             href="https://github.com/SuhasHanamannavar/pinchu"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[11px] font-medium transition-colors duration-200"
+            className="text-xs font-medium transition-colors duration-200"
             style={{ color: "#8b8e9c" }}
             onMouseEnter={(e) => (e.currentTarget.style.color = "#dad7de")}
             onMouseLeave={(e) => (e.currentTarget.style.color = "#8b8e9c")}
           >
             GitHub
           </a>
-          <a href="#download" className="btn-primary text-[11px] py-1.5 px-4">
+          <a href="#download" className="btn-primary text-xs py-1.5 px-4">
             Download
           </a>
         </div>
