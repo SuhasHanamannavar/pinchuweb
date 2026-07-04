@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Download, Apple, Monitor, Terminal, Sparkles } from "lucide-react";
+import { Download, Monitor, Terminal, Sparkles } from "lucide-react";
 import PinchuCharacter from "./PinchuCharacter";
 
 function GithubIcon({ className }: { className?: string }) {
@@ -68,7 +68,10 @@ export default function DownloadCTA() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8">
-            <motion.button
+            <motion.a
+              href="https://github.com/SuhasHanamannavar/pinchu"
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-primary relative overflow-hidden"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
@@ -80,8 +83,8 @@ export default function DownloadCTA() {
                 transition={{ duration: 2.5, repeat: Infinity, ease: "linear", repeatDelay: 3 }}
               />
               <Sparkles className="w-4 h-4" />
-              Download for Windows
-            </motion.button>
+              Get Pinchu
+            </motion.a>
             <a
               href="https://github.com/SuhasHanamannavar/pinchu"
               target="_blank"
@@ -93,15 +96,23 @@ export default function DownloadCTA() {
             </a>
           </div>
 
-          <div className="flex items-center justify-center gap-5 text-xs" style={{ color: "#62626f" }}>
+          <div className="flex items-center justify-center gap-5 text-xs mb-6" style={{ color: "#62626f" }}>
             <span className="flex items-center gap-1.5"><Monitor className="w-3 h-3" /> Windows</span>
-            <span className="flex items-center gap-1.5"><Apple className="w-3 h-3" /> macOS</span>
-            <span className="flex items-center gap-1.5"><Terminal className="w-3 h-3" /> Linux</span>
+            <span className="flex items-center gap-1.5"><Terminal className="w-3 h-3" /> Python 3.10+</span>
+          </div>
+
+          <div className="max-w-md mx-auto p-4 text-left" style={{ background: "#08080a", border: "1px solid #17171c", borderRadius: "3px" }}>
+            <p className="text-[10px] font-medium mb-2" style={{ color: "#8e6ce4" }}>Quick start</p>
+            <div className="space-y-1 font-mono text-[10px]" style={{ color: "#8b8e9c" }}>
+              <p><span style={{ color: "#62626f" }}>$</span> git clone https://github.com/SuhasHanamannavar/pinchu.git</p>
+              <p><span style={{ color: "#62626f" }}>$</span> pip install -r requirements.txt</p>
+              <p><span style={{ color: "#62626f" }}>$</span> python main.py</p>
+            </div>
           </div>
 
           <div className="mt-6 pt-6" style={{ borderTop: "1px solid #17171c" }}>
             <p className="text-[10px]" style={{ color: "#62626f" }}>
-              Python 3.10+ &middot; Any LLM API key (OpenAI, Anthropic, or compatible)
+              Requires an LLM API key (OpenAI, Anthropic, or compatible)
             </p>
           </div>
         </motion.div>
