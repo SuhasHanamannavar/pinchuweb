@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import {
   ListTodo, Activity, MonitorSpeaker, MessageSquare, Shield, Mic, BarChart3, Cloud, Laptop,
+  GitBranch, Terminal, Brain, Users,
 } from "lucide-react";
 
 const features = [
@@ -13,7 +14,11 @@ const features = [
   { icon: Mic, title: "Voice Interaction", description: "Push-to-talk voice input with speech recognition. Pinchu speaks back with text-to-speech summaries and nudges.", color: "#8960f0" },
   { icon: BarChart3, title: "Daily Summaries", description: "Auto-generated progress reports with productivity scores. See what you accomplished and what needs attention.", color: "#8e6ce4" },
   { icon: Cloud, title: "Cognee Cloud Memory", description: "Cognitive memory layer in the cloud. Pinchu learns your patterns, preferences, and context over time.", color: "#ab8ff1" },
-  { icon: Laptop, title: "Cross-Platform", description: "Works on Windows and macOS. Same features, same character, same experience across both platforms.", color: "#8960f0" },
+  { icon: GitBranch, title: "Knowledge Graph", description: "Visual graph showing how your tasks, activities, and context connect. Explore relationships with traversal and cluster views.", color: "#8960f0" },
+  { icon: Brain, title: "Memory Management", description: "You control the memory. Optimize it with 'improve' to sharpen patterns, or 'forget' to clear everything and start fresh.", color: "#8e6ce4" },
+  { icon: Users, title: "Team Memory", description: "Share context with teammates. Collaborative memory lets your team benefit from Pinchu's learned patterns and shared context.", color: "#ab8ff1" },
+  { icon: Terminal, title: "CLI Tool", description: "Use Pinchu from the command line. Add tasks, mark done, get summaries, manage memory — all without opening the GUI.", color: "#8960f0" },
+  { icon: Laptop, title: "Cross-Platform", description: "Works on Windows and macOS. Same features, same character, same experience across both platforms.", color: "#8e6ce4" },
 ];
 
 const container = {

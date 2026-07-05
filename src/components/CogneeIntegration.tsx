@@ -1,11 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Cloud, Brain, Sparkles, Shield } from "lucide-react";
+import { Cloud, Brain, Sparkles, Shield, GitBranch, Users, RefreshCw } from "lucide-react";
 
 const operations = [
   { icon: Brain, name: "cognify()", description: "Process tasks and activities into cognitive memory. Pinchu learns your patterns, preferences, and productivity rhythms.", action: "Tasks → Learn → Adapt", color: "#ab8ff1" },
   { icon: Sparkles, name: "recall()", description: "Retrieve context-aware insights from your memory. 'What was I doing yesterday?' 'When am I most productive?'", action: "Query → Context → Answer", color: "#8960f0" },
+  { icon: GitBranch, name: "knowledge graph()", description: "Build a visual graph of how your tasks, activities, and context connect. Traverse relationships and discover patterns.", action: "Nodes → Edges → Insights", color: "#8e6ce4" },
+  { icon: RefreshCw, name: "improve()", description: "Optimize your memory. Pinchu sharpens patterns, removes noise, and strengthens the connections that matter most.", action: "Raw → Refined → Sharp", color: "#ab8ff1" },
+  { icon: Users, name: "share()", description: "Share your memory with teammates. Collaborative context lets your team benefit from Pinchu's learned patterns.", action: "Personal → Shared → Team", color: "#8960f0" },
   { icon: Cloud, name: "cloud sync", description: "Optional cloud storage via Cognee. Your memory persists across sessions and devices while staying encrypted.", action: "Encrypt → Sync → Access", color: "#8e6ce4" },
   { icon: Shield, name: "local fallback", description: "When offline, Pinchu falls back to local JSON storage. Full functionality without internet. Your data stays on your machine.", action: "Detect → Fallback → Store", color: "#ab8ff1" },
 ];
@@ -36,7 +39,7 @@ export default function CogneeIntegration() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-px mb-16" style={{ background: "#31313a" }}>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px mb-16" style={{ background: "#31313a" }}>
           {operations.map((op, i) => (
             <motion.div
               key={op.name}

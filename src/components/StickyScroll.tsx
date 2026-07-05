@@ -2,7 +2,7 @@
 
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
-import { ListTodo, Brain, MessageSquare, ArrowRight } from "lucide-react";
+import { ListTodo, Brain, MessageSquare, ArrowRight, GitBranch, Terminal } from "lucide-react";
 
 const workflowSteps = [
   {
@@ -78,6 +78,40 @@ const workflowSteps = [
       </div>
     ),
   },
+  {
+    icon: GitBranch,
+    title: "Learn",
+    subtitle: "Memory that grows",
+    description: "Pinchu builds a knowledge graph from your activity. It learns your patterns across sessions, and you can optimize or clear memory anytime.",
+    details: ["Knowledge graph", "Context chaining", "Improve/forget", "Team sharing"],
+    mockUI: (
+      <div className="space-y-2">
+        <div className="text-xs mb-2" style={{ color: "#8b8e9c" }}>Knowledge Graph</div>
+        <div className="relative h-32 flex items-center justify-center" style={{ background: "#08080a", border: "1px solid #17171c", borderRadius: "3px", overflow: "hidden" }}>
+          <svg viewBox="0 0 200 120" className="w-full h-full" style={{ padding: "8px" }}>
+            {/* Nodes */}
+            <circle cx="100" cy="30" r="12" fill="#8e6ce4" opacity="0.8" />
+            <circle cx="50" cy="70" r="10" fill="#22c55e" opacity="0.8" />
+            <circle cx="150" cy="70" r="10" fill="#eab308" opacity="0.8" />
+            <circle cx="70" cy="100" r="8" fill="#ab8ff1" opacity="0.6" />
+            <circle cx="130" cy="100" r="8" fill="#8960f0" opacity="0.6" />
+            {/* Edges */}
+            <line x1="100" y1="30" x2="50" y2="70" stroke="#31313a" strokeWidth="1" />
+            <line x1="100" y1="30" x2="150" y2="70" stroke="#31313a" strokeWidth="1" />
+            <line x1="50" y1="70" x2="70" y2="100" stroke="#31313a" strokeWidth="1" />
+            <line x1="150" y1="70" x2="130" y2="100" stroke="#31313a" strokeWidth="1" />
+            <line x1="70" y1="100" x2="130" y2="100" stroke="#31313a" strokeWidth="1" />
+            {/* Labels */}
+            <text x="100" y="28" textAnchor="middle" fill="#dad7de" fontSize="7" fontFamily="monospace">Tasks</text>
+            <text x="50" y="72" textAnchor="middle" fill="#dad7de" fontSize="6" fontFamily="monospace">Code</text>
+            <text x="150" y="72" textAnchor="middle" fill="#dad7de" fontSize="6" fontFamily="monospace">Email</text>
+            <text x="70" y="102" textAnchor="middle" fill="#dad7de" fontSize="5" fontFamily="monospace">Focus</text>
+            <text x="130" y="102" textAnchor="middle" fill="#dad7de" fontSize="5" fontFamily="monospace">Break</text>
+          </svg>
+        </div>
+      </div>
+    ),
+  },
 ];
 
 export default function StickyScroll() {
@@ -99,7 +133,7 @@ export default function StickyScroll() {
             From tasks to<br />accomplishment
           </h2>
           <p className="text-base max-w-lg leading-relaxed" style={{ color: "#8b8e9c" }}>
-            The complete workflow — capture, track, assist.
+            The complete workflow — capture, track, assist, learn.
           </p>
         </motion.div>
 
@@ -140,7 +174,7 @@ export default function StickyScroll() {
                       ))}
                     </div>
                   </div>
-                  {i < 2 && (
+                  {i < 3 && (
                     <ArrowRight className="w-3 h-3 mt-3 hidden lg:block" style={{ color: "#31313a" }} />
                   )}
                 </div>
