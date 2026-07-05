@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import {
   ListTodo, Activity, MonitorSpeaker, MessageSquare, Shield, Mic, BarChart3, Cloud, Laptop,
-  GitBranch, Terminal, Brain, Users,
+  GitBranch, Terminal, Brain, Users, Zap, HeartPulse, Globe, LayoutDashboard,
 } from "lucide-react";
 
 const features = [
@@ -17,8 +17,12 @@ const features = [
   { icon: GitBranch, title: "Knowledge Graph", description: "Visual graph showing how your tasks, activities, and context connect. Explore relationships with traversal and cluster views.", color: "#8960f0" },
   { icon: Brain, title: "Memory Management", description: "You control the memory. Optimize it with 'improve' to sharpen patterns, or 'forget' to clear everything and start fresh.", color: "#8e6ce4" },
   { icon: Users, title: "Team Memory", description: "Share context with teammates. Collaborative memory lets your team benefit from Pinchu's learned patterns and shared context.", color: "#ab8ff1" },
-  { icon: Terminal, title: "CLI Tool", description: "Use Pinchu from the command line. Add tasks, mark done, get summaries, manage memory — all without opening the GUI.", color: "#8960f0" },
-  { icon: Laptop, title: "Cross-Platform", description: "Works on Windows and macOS. Same features, same character, same experience across both platforms.", color: "#8e6ce4" },
+  { icon: Zap, title: "Agent Mode", description: "Pinchu executes actions for you — open apps, browse URLs, run commands, search the web. Just tell it what to do.", color: "#8960f0" },
+  { icon: HeartPulse, title: "Burnout Prediction", description: "Analyzes your activity patterns and predicts burnout risk. Gets warnings before you hit a wall.", color: "#8e6ce4" },
+  { icon: Globe, title: "REST API", description: "Full REST API with FastAPI. Webhooks, integrations with Slack, GitHub, Calendar. Build on top of Pinchu.", color: "#ab8ff1" },
+  { icon: LayoutDashboard, title: "Team Analytics", description: "Leaderboard, activity heatmap, team insights. See how your team collaborates and where to improve.", color: "#8960f0" },
+  { icon: Terminal, title: "CLI Tool", description: "14 commands from the terminal. Add tasks, manage memory, run agent actions, check burnout — no GUI needed.", color: "#8e6ce4" },
+  { icon: Laptop, title: "Cross-Platform", description: "Works on Windows and macOS. Same features, same character, same experience across both platforms.", color: "#ab8ff1" },
 ];
 
 const container = {

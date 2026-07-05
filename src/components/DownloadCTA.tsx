@@ -146,13 +146,20 @@ export default function DownloadCTA() {
             <p className="text-[10px] font-medium mb-2" style={{ color: "#8960f0" }}>CLI usage</p>
             <div className="space-y-1 font-mono text-[10px]" style={{ color: "#8b8e9c" }}>
               <p>pinchu add &quot;task description&quot;</p>
-              <p>pinchu list</p>
-              <p>pinchu done &lt;index&gt;</p>
-              <p>pinchu summary</p>
-              <p>pinchu remember &quot;text&quot;</p>
-              <p>pinchu recall &quot;query&quot;</p>
-              <p>pinchu graph</p>
-              <p>pinchu history</p>
+              <p>pinchu list / done / summary</p>
+              <p>pinchu remember &quot;text&quot; / recall &quot;query&quot;</p>
+              <p>pinchu graph / history / nodes</p>
+              <p>pinchu agent &quot;open chrome&quot;</p>
+              <p>pinchu burnout</p>
+              <p>pinchu api</p>
+            </div>
+          </div>
+
+          <div className="max-w-lg mx-auto mt-4 p-4 text-left" style={{ background: "#08080a", border: "1px solid #17171c", borderRadius: "3px" }}>
+            <p className="text-[10px] font-medium mb-2" style={{ color: "#22c55e" }}>pip install</p>
+            <div className="space-y-1 font-mono text-[10px]" style={{ color: "#8b8e9c" }}>
+              <p>pip install pinchu</p>
+              <p>pip install pinchu[api]</p>
             </div>
           </div>
 
