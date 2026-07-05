@@ -7,7 +7,7 @@ import { ChevronDown } from "lucide-react";
 const faqs = [
   {
     question: "What is Pinchu?",
-    answer: "Pinchu is an AI productivity buddy for your desktop. It manages your tasks, monitors your activity, and keeps you focused with an animated character that floats on your screen. Think of it as a personal assistant that actually knows what you're doing.",
+    answer: "Pinchu is a self-improving personal memory agent for your desktop. It learns your productivity patterns, predicts burnout, and shares team intelligence — powered by Cognee's hybrid graph-vector memory. Think of it as a personal assistant that actually knows what you're doing and gets smarter every day.",
   },
   {
     question: "Is it really free?",

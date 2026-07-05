@@ -71,9 +71,11 @@ export default function Hero() {
           className="text-base md:text-lg max-w-md mx-auto mb-10 leading-relaxed"
           style={{ color: "#8b8e9c" }}
         >
-          Your AI productivity buddy.
+          A self-improving personal memory agent that learns your
           <br className="hidden md:block" />
-          Plans your day, tracks your progress, keeps you focused.
+          productivity patterns, predicts burnout, and shares
+          <br className="hidden md:block" />
+          team intelligence — powered by Cognee.
         </motion.p>
 
         {/* CTAs */}

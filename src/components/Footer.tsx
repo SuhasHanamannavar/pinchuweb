@@ -15,7 +15,7 @@ export default function Footer() {
               <span className="text-sm font-medium" style={{ color: "#dad7de" }}>pinchu</span>
             </div>
             <p className="text-xs leading-relaxed" style={{ color: "#62626f" }}>
-              An AI productivity buddy that manages your tasks, monitors your activity, and keeps you focused.
+              A self-improving personal memory agent that learns your productivity patterns, predicts burnout, and shares team intelligence.
             </p>
           </div>
 

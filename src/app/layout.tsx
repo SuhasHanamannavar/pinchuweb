@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Pinchu — Your AI Productivity Buddy",
+  title: "Pinchu — AI that watches, learns, and acts",
   description:
-    "A desktop AI companion that manages your tasks, monitors your activity, and keeps you focused. Voice interaction, animated character, and Cognee cloud memory. All open source.",
+    "A self-improving personal memory agent that learns your productivity patterns, predicts burnout, and shares team intelligence — powered by Cognee's hybrid graph-vector memory.",
   keywords: [
     "Pinchu",
     "AI productivity",
@@ -16,20 +16,23 @@ export const metadata: Metadata = {
     "activity monitoring",
     "voice assistant",
     "open source",
+    "burnout prediction",
+    "knowledge graph",
+    "memory agent",
   ],
   openGraph: {
-    title: "Pinchu — Your AI Productivity Buddy",
+    title: "Pinchu — AI that watches, learns, and acts",
     description:
-      "Manage tasks. Monitor activity. Stay focused. An AI productivity companion with voice, animation, and cloud memory.",
+      "A self-improving personal memory agent that learns your productivity patterns, predicts burnout, and shares team intelligence.",
     type: "website",
     url: "https://pinchu.dev",
     images: ["/og-image.png"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pinchu — Your AI Productivity Buddy",
+    title: "Pinchu — AI that watches, learns, and acts",
     description:
-      "Manage tasks. Monitor activity. Stay focused. An AI productivity companion with voice, animation, and cloud memory.",
+      "A self-improving personal memory agent that learns your productivity patterns, predicts burnout, and shares team intelligence.",
   },
 };
 
